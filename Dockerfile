@@ -8,7 +8,7 @@ RUN curl -o /tmp/concrete5.zip -SL http://www.concrete5.org/download_file/-/view
         && chmod 777 /var/www/html/concrete5 \
         && chown -R apache. /var/www/html/concrete5
 
-COPY vhosts.conf /etc/httpd/conf.d/vhosts.conf
+COPY vhosts.conf security.conf /etc/httpd/conf.d/
 COPY entrypoint.sh /
 
 EXPOSE 80
